@@ -27,14 +27,24 @@ RETURNS int
 AS
 BEGIN
 	-- Declare the return variable here
-	DECLARE @ResultVar int
+	DECLARE @ResultVar INT
+		   ,@cValues as varchar(max); 
+
+	declare @cXML XML;
+			   
+	set @cValues=@pString;
 	
-
 	-- Add the T-SQL statements to compute the return value here
-	SELECT @ResultVar = 1
 
+	set @cXML=cast('<a>'+
+			REPLACE(@cValues, ',' ,'</a><a>')+'</a>' 
+			as XML);
+
+	SELECT @ResultVar= isnull(SUM(CONVERT(INT,nref.value('.','nvarchar(50)'))),0) from @cXML.nodes('/a') AS R(nref)
+			
 	-- Return the result of the function
 	RETURN @ResultVar
+
 
 END
 GO
