@@ -2,7 +2,9 @@ function AddSimple(numbers,delimeter) {
 	var tmp = numbers.split(new RegExp(delimeter));
 	var result =  0;
 	tmp.forEach(function(x){
-		result += Number(x);
+		var tmpNum = Number(x);
+		if (tmpNum < 0) throw Error('negatives not allowed');
+		result += tmpNum;
 	});
 	return result;
 }

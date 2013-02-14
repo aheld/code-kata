@@ -15,7 +15,9 @@ describe("Add - Single digit cases", function() {
         expect(Add(x[0])).toEqual(x[1]);
       });
     });
-
+  it("should return an Error for a negative input -1", function() {
+    expect(function(){Add("-1");}).toThrow(Error("negatives not allowed"));
+    });
  
 
 });
@@ -59,3 +61,4 @@ describe("Add - Variable Delimeter", function() {
     expect(Add('//;\n1;2,3')).toEqual(6);
     });
 });
+
