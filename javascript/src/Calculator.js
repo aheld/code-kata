@@ -22,5 +22,4 @@ function returnDelimAndNumbers(numbers){
 	}
 	delimeter = "[" + delimeter.join("") + "]";
 	return {'numbers':numbers,'delimeter':delimeter};
-
 }

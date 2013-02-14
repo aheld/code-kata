@@ -18,8 +18,6 @@ describe("Add - Single digit cases", function() {
   it("should return an Error for a negative input -1", function() {
     expect(function(){Add("-1");}).toThrow(Error("negatives not allowed"));
     });
- 
-
 });
 
 describe("Add - Multiple digit cases", function() {
@@ -60,5 +58,12 @@ describe("Add - Variable Delimeter", function() {
     expect(Add('//;\n1;2\n3')).toEqual(6);
     expect(Add('//;\n1;2,3')).toEqual(6);
     });
+    it("should allow - as a delim", function() {
+    expect(Add('//-\n1-2-3')).toEqual(6);
+    expect(Add('//-\n1-2\n3')).toEqual(6);
+    expect(Add('//-\n1-2,3')).toEqual(6);
+    });
+
+
 });
 
