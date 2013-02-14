@@ -1,4 +1,9 @@
 function Add(numbers) {
-	if (numbers.length === 0) return 0;
-	return parseInt(numbers,10);
+	var tmp = numbers.split(',');
+	var result =  0;
+	if (tmp.length > 2) throw Error("fred");
+	tmp.forEach(function(x){
+		result += Number(x);
+	});
+	return result;
 }
