@@ -64,6 +64,13 @@ describe("Add - Variable Delimeter", function() {
     expect(Add('//-\n1-2,3')).toEqual(6);
     });
 
+    it("should call addSimple with '; and 123",function(){
+      AddSimple = jasmine.createSpy("add Simple");
+      Add('//-\n1-2-3');
+      expect(AddSimple.mostRecentCall.args[0]).toEqual('1-2-3');
+      expect(AddSimple.mostRecentCall.args[1]).toEqual('[\n,-]');
+      expect(AddSimple).toHaveBeenCalledWith("1-2-3","[\n,-]");
+    });
 
 });
 
