@@ -1,9 +1,5 @@
 Bootstrap for Python
 ====================
 
-- Create a Python2.7 virtualenv
-- install nose
-    - pip install -r requirements.txt
-
-or 
+- Create a Python3 virtualenv
 - python calculator_test.py
