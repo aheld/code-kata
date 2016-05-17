@@ -1,7 +1,7 @@
 Bootstrap for Python
 ====================
 
-- Create a Python3 virtualenv
+- Create a Python3 virtualenv (anaconda users: conda create -n codekata python=3.5 anaconda )
 - python calculator_test.py
 
 for more fun you can also install an optional watcher (pip install -r dev-requirements)
