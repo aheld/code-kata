@@ -1,0 +1,29 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "setup for the calculator kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "testw": "mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aheld/code-kata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aheld/code-kata/issues"
+  },
+  "homepage": "https://github.com/aheld/code-kata#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  },
+  "dependencies": {
+    "eslint": "^4.17.0",
+    "sequelize": "^4.33.4",
+    "sqlite3": "^3.1.13"
+  }
+}
