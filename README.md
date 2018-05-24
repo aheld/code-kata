@@ -1,7 +1,8 @@
 Bootstrap for TDD Kata
 ======================
 
-[Kata guide](http://aheld.github.io/code-kata/)
+# Start here: [Kata guide](http://aheld.github.io/code-kata/)
+
 Basic bootstrap for .net and javascript for my team to practice [Roy Osherovs's TDD kata](http://osherove.com/tdd-kata-1/)
 
 The steps are captured in the Powerpoint file to discourage reading ahead!
